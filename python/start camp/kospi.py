@@ -10,6 +10,6 @@ data = BeautifulSoup(response,'html.parser') #html일 경우 뷰티플소프로 
 n=0 
 while n<5: 
     select = data.select_one('#wrapSearch > div.slide_favorsch > ul > li > a')
-    n = n + 1
+    n = n + 2
     print(select.text)
 
