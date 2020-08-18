@@ -1,11 +1,14 @@
 ### django
 
+<<<<<<< HEAD
 python 을 기반으로 하는 웹 백엔드 프레임워크
 
 #### 장고 설치방법
 
 `pip install django`
 
+=======
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
 #### 프로젝트 만들기
 
 `django-admin startproject first_projeect(프로젝트이름)`
@@ -15,7 +18,10 @@ python 을 기반으로 하는 웹 백엔드 프레임워크
 * 하이픈 
 * python, djngo 에서 쓰는 기본적인 이름
 * 가장 밖에 있는 프로젝트 폴더명은 수정 가능하나 ,setting 파일이 들어있는 폴더명은 걸드리지 말자
+<<<<<<< HEAD
 * 프로젝트 생성 완료하면 항상 manage.py 가 있는 위치로 이동
+=======
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
 
 #### 서버 켜기
 
@@ -29,9 +35,15 @@ ctrl + c
 
 `python manage.py startapp articles(앱이름)`
 
+<<<<<<< HEAD
 * **바로 setting app을 등록해주기!!! **
 
   install_apps 제일 위에 등록
+=======
+**바로 setting app을 등록해주기!!! **
+
+install_apps 제일 위에 등록
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
 
 * 앱이름은 복수형으로 만들어 줄 것
 
@@ -149,14 +161,21 @@ ______________________________
 
   * url 주소 일부를 변수처럼 사용해서 동적인 주소를 만드는 것.
 
+<<<<<<< HEAD
   * 사용하지 않으면 일일이 등록해줘야함
 
+=======
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
   * 주소 요청 : `http://127.0.0.1:8000/hello/문자열`
 
     urls.py
 
     ```
+<<<<<<< HEAD
     path('hello/<str(타입):name(저장되는 변수명)>/', views.hello)
+=======
+    path('hello/str(타입):name(저장되는 변수명)/', views.hello)
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
     ```
 
     views.py
@@ -178,28 +197,42 @@ ______________________________
         이름은 : {{ name }} # context의 key 값을 사용하면 value를 출력한다.
     </body>
     ```
+<<<<<<< HEAD
     
   * 변수로 사용할 수 있는 type의 종류
 
     * 구글에서 django 공식문서의  url dispatcher 검색
 
 * DTL(Django Template Language)  (tag와 filter)
+=======
+
+* DTL (tag와 filter)
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
 
   * 로직을 표현 할때는 : {% for %}
 
   * 값을 표현 할 때는 : {{ }}
 
+<<<<<<< HEAD
   * 주석으로 나타내고 싶을 때는 : {# #} or {% comment %} 주석할내용 {% endcomment %} 
 
     ```
     <!-- <h1>{#{i * 2}#}</h1> -->
     {% comment %} <h1>{i * 2}</h1> {% comment %}
+=======
+  * 주석으로 나타내고 싶을 때는 : {# #} or {% comment %} 주석할내용 {% comment %} 
+
+    ```
+    <!-- <h1>{#{i * 2}#}</h1> -->
+    {% comment %} <h1>{i * 2}</h1> {% comment %
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
     ```
 
   * for 태그 
 
     * 반복을 위한 태그
 
+<<<<<<< HEAD
       ```html
       {% for 임시변수 in interable 한 객체 %}
       <p>{{ forloop.counter0 }}{{ menu }}</p>
@@ -208,23 +241,42 @@ ______________________________
   
   * for empty
   
+=======
+      ```
+      {% for 임시변수 in interable 한 객체 %}
+      {% endfor %}
+      ```
+
+    * for empty
+
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
       ```
       {% for 임시변수 in interable 한 객체 %}
       	값이 하나라도 있으면 여기가 실행
       {% empty %}
       	출력할 값이 없으면 출력.
       {% endfor %}
+<<<<<<< HEAD
     ```
   
 * if 태그
   
   * 조건을 구분하기 위한 태그
   
+=======
+      ```
+
+  * if 태그
+
+    * 조건을 구분하기 위한 태그
+
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
       ```
       {% if 조건문 %}
       {% elif 조건문 %}
       {% else %}
       {% endif %}
+<<<<<<< HEAD
     ```
       
     * 조건 연산자 사용 가능
@@ -277,3 +329,8 @@ ______________________________
       `localhost:8000/catch/?데이터명=데이터값&데이터1명=데이터1값&...`
 
   * request 라고 장고 함수를 선언할 때 넣어주었던 인자에 그 값이 들어 있음.
+=======
+      ```
+
+  * 나머지 기타 유용안 dtl 문서를 참고,
+>>>>>>> f47b54487eda30bd461ff1ba95546bf67cb43839
